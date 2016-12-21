@@ -1,6 +1,6 @@
 var toggle = false;
 var isOpen = false;
-var projects = ["visualizer", "leaguerec", "measure", "newday", "deloitte", "clearcell", "linkedlist"];
+var projects = ["visualizer", "leaguerec", "measure", "newday", "deloitte", "clearcell"];
 var projOpen = "";
 var backgrounds = {"about":"url(pics/umd2.jpg)",
 				   "projects":"url(pics/weather.png)",
