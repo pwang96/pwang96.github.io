@@ -4,6 +4,7 @@ $(function() {
 	bindNavItems();
 	animateContactIcons();
 	showSlides(0);
+	animateVerb();
 });
 
 function bindNavItems() {
@@ -50,3 +51,14 @@ function showSlides(n) {
 	}
 	slides[slideIndex-1].style.display = "block"
 ;}
+
+function animateVerb() {
+	$(".changing-verb").typed({
+        strings: ["create.", "code.", "question.", "teach.", "explore.", "care."],
+        typeSpeed: 80,
+		backSpeed: 30,
+		backDelay: 1500, 
+		loop: true,
+		showCursor: true
+      });
+}

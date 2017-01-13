@@ -33,6 +33,29 @@ p {
 	letter-spacing: 0.03em;
 }
 
+/* animated blinking cursor */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 /* Navigation Bar */
 .navbar .navbar-nav {
 	display: inline-block;
@@ -120,7 +143,7 @@ p {
 }
 
 .intro-pic {
-	width: 100%;
+	max-width: 100%;
 	min-height: 250px;
 	max-height: 250px;
 	padding-top: 15px;
