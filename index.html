@@ -10,530 +10,80 @@
 	<link rel="icon" type="image/png" href="pics/favicon-96x96.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="typed.js"></script>
 	<script src="index.js"> </script>
   <title>Peter Wang</title>
 </head>
 
 <body>
-	<div id="nav">
-		<nav class="navbar navbar-full navbar-light bg-faded">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hamburgernav">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+	<div id="page">
+		<div id="sidebar">
+			<div id="intro">
+				<div id="biopic">
+					<img id="biopic" class="biopic" src="pics/biopic.png"/>
 				</div>
-				<div class="collapse navbar-collapse" id="hamburgernav">
-					<ul class="nav navbar-nav" role="menu">
-						<li><a href="#" id="nav-home" class="active">home</a></li>
-						<li><a href="#" id="nav-about">about</a></li>
-						<li><a href="#" id="nav-projects">projects</a></li>
-						<li><a href="#" id="nav-resume">resume</a></li>
-						<li><a href="#" id="nav-contact">contact</a></li>
-					</ul>
-				</div>
+				<h1 style="padding-bottom:0.5em">
+					<a href="index.html">Peter Wang</a>
+				</h1>
+				<h4 style="padding-bottom:0.3em">Engineer</h4>
 			</div>
-		</nav>
-	</div>
+			<div id="navbar">
+				<ul id="navlist">
+					<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+					<li><a href="#about" data-nav-section="about">About</a></li>
+					<li><a href="#blog" data-nav-section="blog">Blog</a></li>
+					<li><a href="#contact" data-nav-section="contact">Contact</a></li>
+				</ul>
+			</div>
 
-	<div id="home" class="">
-		<div id="intro" class="container-fluid">
-			<div id="headline" class="col-md-8 col-md-offset-2">
-				<h2 class="text-center">
-					I <span style="color:mediumaquamarine" class="changing-verb"></span>
-				</h2>
-			</div>
-			<div id="blurb" class="col-md-6 col-md-offset-3">
-				<p class="text-center">
-					Hi! My name is Peter Wang. In a nutshell, I am a problem solver. I believe
-					that all problems are interdisciplinary, and I combine technical skill with
-					communication in order to provide the best solution for the clients' and 
-					customers' needs.
-				</p>
-			</div>
-			<div id="caption" class="col-md-6 col-md-offset-3">
-				<p class="text-center">
-					I'm currently looking for software engineering internships and technology 
-					consulting internships!
-				</p>
-			</div>
 		</div>
-		<hr>
-
-		<div id="project-intro" class="container-fluid">
-			<div id="audiovisualizer-blurb" class="project-blurb container-fluid">
-				<div class="row">
-					<div id="audiovisualizer-date" class="col-md-3">
-						<h5 class="text-left">November 2016</h5>
+		<div id="content">
+			<div id="main-content">
+				<div id="home" class="hidden">
+					<div id="home-pic">
+						<img src="pics/osman-rana-dI9KhXi0ooE-unsplash.jpg"/>
+					</div>
+					<h1>Hello! I'm Peter.</h1>
+					<div id="home-blurb">
+						Welcome to my website, where you can find out more about me, follow my blog posts, and reach out to me!
 					</div>
 				</div>
-				<div class="row">
-					<div id="audiovisualizer-title" class="col-md-6">
-						<h4 class="text-left">I created a 3D interactive music visualizer with a friend.</h4>
+				<div id="about" class="hidden">
+					<h1>About Me</h1>
+					<div id="about-blurb">
+						<p>
+							Currently, I'm an MS student studying applied mathematics at Columbia University.
+						</p>
+						<p>
+							I graduated magna cum laude in May 2019 from the University of Maryland in with a degree in computer engineering.
+						</p>
+						<a href="resume.pdf" class="btn btn-outline-primary">Resume</a>
 					</div>
 				</div>
-				<div class="row">
-					<div id="audiovisualizer-summary" class="col-md-8">
-						<p class="text-left">
-							While doing this project, I learned a lot about Javascript, jQuery, Git, and more.
-							Furthermore, it was fun working with a partner on something we were both 
-							passionate about. Take a look at our visualizer
-							<a href="https://atomaudioviz.herokuapp.com" target="_blank">here</a>!
+				<div id="blog" class="">
+					<h1>Welcome to my blog!</h1>
+					<div id="blog-blurb">
+						<p>
+							I'll be posting everything I write here, along with a link to the original post (if applicable).
 						</p>
 					</div>
-				</div>
-				<div class="row">
-					<button type="button" class="btn btn-info btn-md pull-left" data-toggle="modal" data-target="#audiovisualizer-modal">Check it out!</button>
-				</div>
-			</div>
-		</div>
-		<div id="audiovisualizer-pic">
-			<img class="center-block intro-pic" src="pics/music.jpg"/>
-		</div>
-
-		<div id="project-intro" class="container-fluid">
-			<div id="leaguerec-blurb" class="project-blurb container-fluid">
-				<div class="row">
-					<div id="leaguerec-date" class="col-md-3 col-md-offset-9">
-						<h5 class="text-right">October 2016</h5>
+					<div id="blog-list">
+						<ul>
+							<li><a href="#">Post 1</a></li>
+							<li><a href="#">Post 2</a></li>
+						</ul>
 					</div>
+
 				</div>
-				<div class="row">
-					<div id="leaguerec-title" class="col-md-6 col-md-offset-6">
-						<h4 class="text-right">I created a League of Legends champion recommender.</h4>
+				<div id="contact" class="hidden">
+					<div id="contact-blurb">
+						<h3>
+							Please email me at <a href="mailto:wang.peter@columbia.edu">wang.peter@columbia.edu</a>
+						</h3>
 					</div>
+					<p></p>
 				</div>
-				<div class="row">
-					<div id="leaguerec-summary" class="col-md-8 col-md-offset-4">
-						<p class="text-right">
-							Creating this project taught me Django, and exposed me to the huge world of
-							web development. This was my first full stack web development experience, and 
-							it piqued my interest in the topic. I'm currently learning node.js and other
-							frameworks to further my knowledge in web development. 
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#leaguerec-modal">Check it out!</button>
-				</div>
-			</div>
-		</div>
-		<div id="leaguerec-pic">
-			<img class="center-block intro-pic" src="pics/lolbanner.jpg"/>
-		</div>
-
-		<div id="project-intro" class="container-fluid">
-			<div id="measure-blurb" class="project-blurb container-fluid">
-				<div class="row">
-					<div id="measure-date" class="col-md-3">
-						<h5 class="text-left">May - August 2016</h5>
-					</div>
-				</div>
-				<div class="row">
-					<div id="measure-title" class="col-md-6">
-						<h4 class="text-left">
-							I interned at <span style="color:cornflowerblue">NIST</span>, creating a program that saved 6 hours a day.
-						</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div id="measure-summary" class="col-md-8">
-						<p class="text-left">
-							I worked on a full stack development of a GUI that made the process of mass calibration
-							more streamlined. I used Python for the whole thing, <code>pyqt4</code> for the GUI design,
-							<code>SqlAlchemy</code> to communicate with the MySql database, <code>serial</code> to communicate with the balances, and 
-							scientific packages like <code>numpy</code> and <code>matplotlib</code> for analysis.
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<button type="button" class="btn btn-info btn-md pull-left" data-toggle="modal" data-target="#measure-modal">Check it out!</button>
-				</div>
-			</div>
-		</div>
-		<div id="audiovisualizer-pic">
-			<img class="center-block intro-pic" src="pics/measure.jpg"/>
-		</div>
-
-		<nav class="navbar navbar-full navbar-light bg-faded hidden-xs">
-			<div class="container-fluid text-center">
-				<ul class="nav navbar-nav" role="menu">
-					<li><a href="#" id="nav-home" class="active">home</a></li>
-					<li><a href="#" id="nav-about">about</a></li>
-					<li><a href="#" id="nav-projects">projects</a></li>
-					<li><a href="#" id="nav-resume">resume</a></li>
-					<li><a href="#" id="nav-contact">contact</a></li>
-				</ul>
-			</div>
-		</nav>
-		<div id="footer" class="row">
-			<p class="text-center">Made by Peter Wang!</p>
-		</div>
-	</div>
-
-	<div id="about" class="hidden">
-		<div id="basics" class="container-fluid">
-			<div id="name" class="col-md-6 col-md-offset-3">
-				<h2 class="text-center"> Peter <span style="color:gold">Wang</span></h2>
-			</div>
-			<div id="pic">
-				<img class="center-block" src="pics/biopic.png" />
-			</div>
-			<div id="description" class="col-md-6 col-md-offset-3">
-				<p class="text-center">
-					My name is Peter Wang, and I am a sophomore computer engineer at the University of 
-					<span style="color:red">Ma</span><span style="color:white">ry</span><span style="color:darkgoldenrod">la</span><span style="color:black">nd</span>! 
-					I love helping people solve problems, coding or not, in the most efficient way 
-					possible. 
-				</p>
-				<a href="mailto:96pwang@gmail.com" target="_blank">
-					<button type="button" class="btn btn-default btn-md center-block">Contact Me!</button>
-				</a>
-			</div>
-		</div>
-		<hr>
-		<div id="education" class="container-fluid">
-			<div id="school-name">
-				<h3 class="text-center"> My experience at UMD </h3>
-			</div>
-			<div id="school-experience">
-				<p class="text-center col-sm-10 col-sm-offset-1">
-					As a freshman, I was majoring in mechanical engineering. I coded on the side, on my own. 
-					Then, I began to do research under Dr. Fuge, a mechanical engineering professor who was 
-					doing research in the machine learning field. My coding skills were extremely useful, as 
-					Python is a very powerful tool for machine learning. After this experience, I knew I
-					wanted to pursue programming more in depth, so I switched my major to computer engineering.
-				</p>
-				<p class="text-center col-sm-10 col-sm-offset-1">
-					At the same time, I got involved with a club, Consult Your Community, the UMD chapter of 
-					a nationwide consulting club dedicated to providing pro bono services to local organizations,
-					companies, and non-profits. In this club, of which I am the Vice President, members are 
-					assigned a semester long project to tackle a real world problem faced by a local organization.
-				</p>
-			</div>
-		</div>
-		<hr>
-		<div id="swimming" class="container-fluid">
-			<div id="swimming-title">
-				<h3 class="text-center"> Staying in shape with swimming </h3>
-			</div>
-			<div id="swimming-experience">
-				<p class="text-center col-sm-10 col-sm-offset-1">
-					I've been swimming for over 14 years. In high school, I was very competitive; I practiced
-					7-8 times a week (at 4:15 am sometimes), and did dryland workouts 3-4 times a week. In my
-					junior year, I made NCSA Junior Nationals, where I represented my team in a national meet 
-					in Orlando, Florida. My senior year I was All-American in the 200 medley relay, and broke 
-					a couple state records as well. 
-				</p>
-				<p class="text-center col-sm-10 col-sm-offset-1">
-					Now, I am a captain of the Club Swimming team at UMD, where I swim mostly to stay in shape.
-					We have a couple meets every semester and Nationals in April in Atlanta!
-				</p>
-			</div>
-			<div id="swimming-pics" class="row">
-				<div class="col-sm-3"><img src="pics/swimming.jpg" class="img-responsive"/></div>
-				<div class="col-sm-3"><img src="pics/swimming3.jpg" class="img-responsive"/></div>
-				<div class="col-sm-3"><img src="pics/swimming2.jpg" class="img-responsive"/></div>
-				<div class="col-sm-3"><img src="pics/swimming4.jpg" class="img-responsive"/></div>
-			</div>
-		</div>
-		<hr>
-		<div id="traveling" class="container-fluid">
-			<div id="traveling-title">
-				<h3 class="text-center"> Learning from travels </h3>
-			</div>
-			<div id="traveling-experience">
-				<p class="text-center col-sm-10 col-sm-offset-1">
-					I love traveling. The summer between my senior year of high school and freshman year
-					of college, two friends and I backpacked around Eastern Europe, hitting Germany, Prague,
-					Vienna, and Slovenia. 
-				</p>
-			</div>
-			<div id="traveling-pics" class="row">
-				<div class="col-sm-4"><img src="pics/lakebled.jpg" class="img-responsive"/></div>
-				<div class="col-sm-4"><img src="pics/prague.jpg" class="img-responsive"/></div>
-				<div class="col-sm-4"><img src="pics/vienna.jpg" class="img-responsive"/></div>
-			</div>
-		</div>
-
-		<nav class="navbar navbar-full navbar-light bg-faded hidden-xs">
-			<div class="container-fluid text-center">
-				<ul class="nav navbar-nav" role="menu">
-					<li><a href="#" id="nav-home" class="active">home</a></li>
-					<li><a href="#" id="nav-about">about</a></li>
-					<li><a href="#" id="nav-projects">projects</a></li>
-					<li><a href="#" id="nav-resume">resume</a></li>
-					<li><a href="#" id="nav-contact">contact</a></li>
-				</ul>
-			</div>
-		</nav>
-		<div id="footer" class="row">
-			<p class="text-center">Made by Peter Wang!</p>
-		</div>
-	</div>
-
-	<div id="projects" class="hidden">
-		<div id="projects-container" class="container-fluid">
-			<div id="projects-headline">
-				<h2 class="text-center">Welcome to Peter Wang's Portfolio</h2>
-			</div>
-			<hr>
-			<div id="projects-body" class="container-fluid col-sm-10 col-sm-offset-1">
-				<div class="row project-row">
-					<a href="#" data-toggle="modal" data-target="#audiovisualizer-modal">AudioVisualizer</a>
-				</div>
-				<div class="row project-row">
-					<a href="#" data-toggle="modal" data-target="#leaguerec-modal">LeagueRec</a>
-				</div>
-				<div class="row project-row">
-					<a href="#" data-toggle="modal" data-target="#measure-modal">MEASURE</a>
-				</div>
-				<div class="row project-row">
-					<a href="#" data-toggle="modal" data-target="#newday-modal">NewDay USA</a>
-				</div>
-				<div class="row project-row">
-					<a href="#" data-toggle="modal" data-target="#deloitte-modal">Deloitte</a>
-				</div>
-			</div>
-		</div>
-
-		<nav class="navbar navbar-full navbar-light bg-faded hidden-xs">
-			<div class="container-fluid text-center">
-				<ul class="nav navbar-nav" role="menu">
-					<li><a href="#" id="nav-home" class="active">home</a></li>
-					<li><a href="#" id="nav-about">about</a></li>
-					<li><a href="#" id="nav-projects">projects</a></li>
-					<li><a href="#" id="nav-resume">resume</a></li>
-					<li><a href="#" id="nav-contact">contact</a></li>
-				</ul>
-			</div>
-		</nav>
-		<div id="footer" class="row">
-			<p class="text-center">Made by Peter Wang!</p>
-		</div>
-	</div>
-
-	<div id="resume" class="hidden">
-		<div class="container-fluid">
-			<a id="resume-link" class="col-md-8 col-md-offset-2" href="resume.pdf" target="_blank">
-				<img id="resume-pic" class="center-block" src="pics/resume.jpg" title="Download Resume"/>
-			</a>
-		</div>
-
-		<nav class="navbar navbar-full navbar-light bg-faded hidden-xs">
-			<div class="container-fluid text-center">
-				<ul class="nav navbar-nav" role="menu">
-					<li><a href="#" id="nav-home" class="active">home</a></li>
-					<li><a href="#" id="nav-about">about</a></li>
-					<li><a href="#" id="nav-projects">projects</a></li>
-					<li><a href="#" id="nav-resume">resume</a></li>
-					<li><a href="#" id="nav-contact">contact</a></li>
-				</ul>
-			</div>
-		</nav>
-		<div id="footer" class="row">
-			<p class="text-center">Made by Peter Wang!</p>
-		</div>
-	</div>
-
-	<div id="contact" class="hidden">
-		<div id="contact-intro" class="container-fluid">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<h1 class="text-center">Contact Me</h1>
-					<h3 class="text-center">I look forward to working with you!</h3>
-				</div>
-			</div>
-			<br>
-			<br>
-			<div id="contact-phone" class="col-md-4">
-				<a href="tel:9083925806">
-					<img class="center-block contact-icon" src="pics/phone.png"/>
-				</a>
-				<p class="text-center">(908) 392-5806</p>
-			</div>
-			<div id="contact-email" class="col-md-4">
-				<a href="mailto:96pwang@gmail.com">
-					<img class="center-block contact-icon" src="pics/email.png"/>
-				</a>
-				<p class="text-center">96pwang@gmail.com</p>
-			</div>
-			<div id="contact-linkedin" class="col-md-4">
-				<a href="https://www.linkedin.com/in/peter-wang-6226b830" target="_blank">
-					<img class="center-block contact-icon" src="pics/linkedin.png"/>
-				</a>
-				<p class="text-center">Follow Me!</p>
 			</div>
 		</div>
 	</div>
-
-	<!-- Project Modals -->
-	<div class="modal fade" id="audiovisualizer-modal" role="dialog">
-    	<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-        		<div class="modal-header">
-          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Audio Visualizer</h4>
-        		</div>
-        		<div class="modal-body">
-					<center>
-						<div class="details-pic">
-							<video controls="controls" width="500" height="280" name="Music Visualizer" src="visualizer.mov"></video>
-						</div>
-					</center>
-					<div class="details-links row text-right">
-				  		<div id="proj-links">
-							<a href="https://github.com/pwang96/audiovisualizer" target="_blank">
-								<img src="pics/github_icon.svg"/>
-							</a>
-							<a href="https://atomaudioviz.herokuapp.com/" target="_blank">
-								<img src="pics/heroku.png"/>
-							</a>
-				  		</div>
-	  				</div>
-					<p class="text-md-left text-xs-center">
-						I created this web app with a friend because we both love music. While there are many different audio visualizers
-				  		out there, we wanted to make a unique, interactive music visualizer. Our 3D visualizer is implemented only using
-				  		Javascript (and jQuery). In particular, we used three.js for the animations. Much like other visualizers, we 
-				  		used the Fast Fourier Transform of the song to drive the animations. The size of the spheres depends on the amplitude
-				  		of the FFT, whereas the color of the spheres depend on the overall "flavor" of the song, which also depends on 
-				  		which frequencies are present. 
-					</p>
-        		</div>
-				<div class="modal-footer">
-          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
-	<div class="modal fade" id="leaguerec-modal" role="dialog">
-    	<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-        		<div class="modal-header">
-          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">League of Legends Champion Recommender</h4>
-        		</div>
-        		<div class="modal-body">
-          			<center>
-						  <div class="details-pic">
-							  <img class="leaguerec-pic" src="pics/leaguerec.png"/>
-						  </div>
-          			</center>
-					<div class="details-links row text-right">
-						<div id="proj-links">
-							<a href="https://github.com/pwang96/LeagueRec" target="_blank">
-								<img src="pics/github_icon.svg"/>
-							</a>
-				  		</div>
-	  				</div>
-	  				<p class="text-md-left text-xs-center">
-	  					This web application uses machine learning (scikit-learn) to predict which League of Legends champions a player would enjoy playing, based on playstyle history. League of Legends, created by Riot Games is the most played PC game in North America and Europe, where players control a different champion every game. Currently there are 133 champions (new champions are being created every few months).
-	  					&nbsp;This web app is powered entirely by the Django web framework for Python. When a username is entered into the site, the Riot API to get stats about the player, some of which I display on the results page. The data is parsed, and then I find a few hundred players around the same ELO as the user. I create a matrix for each player that describes their champion playstyle, and I use cosine similarity to determine which players are most similar.
-	  					&nbsp;Afterwards, I look for common champions in the players who are most similar, and I recommend three of them.
-	  					&nbsp;I created this app because I'm a big fan of the game, but also because I wanted to get some experience with full stack web development. 
-	  				</p>
-        		</div>
-				<div class="modal-footer">
-          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
-	<div class="modal fade" id="measure-modal" role="dialog">
-    	<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-        		<div class="modal-header">
-          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">MEASURE</h4>
-        		</div>
-        		<div class="modal-body">
-					<center>
-						<div class="details-pic">
-							<div>
-								<img class="measure-pic" src="pics/measure1.png" />
-								<img class="measure-pic" src="pics/measure2.png" />
-								<img class="measure-pic" src="pics/measure3.png" />
-								<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-								<a class="next" onclick="plusSlides(1)">&#10095;</a>
-							</div>
-						</div>
-					</center>
-					<div class="details-links row text-right">
-				  		<div id="proj-links">
-							<a href="https://github.com/pwang96/MEASURE" target="_blank">
-								<img src="pics/github_icon.svg"/>
-							</a>
-				  		</div>
-	  				</div>
-					<p class="text-md-left text-xs-center">
-						During my time as an intern at NIST, I created a program called MEASURE. 
-						MEASURE is a program written in Python that automates and simplifies the mass calibration process. MEASURE was started by Alexander Moses and continued by Peter Wang. The mass calibration process is a lengthy process that NIST follows to calibrate customer weights, using NIST’s internal weights, which are traceable back to the International Prototype Kilogram (IPK) in Paris. 
-	  					&nbsp;MEASURE provides a GUI (graphical user interface) that allows the metrologists to conduct a calibration much more easily. MEASURE also includes a MySql database interface, where comparator information, thermometer info, NIST weight info, customer weight info, and much more, are all stored. MEASURE allows metrologists to easily pick which weights they want to calibrate, how they want to calibrate them, and on which balance the weights should be calibrated on. Once all the settings are chosen, MEASURE will then communicate with the comparator through a COM port and automatically compare the weights with each other. At the same time, MEASURE communicates with the thermometer, hygrometer, and barometer to get environmental readings at set intervals.
-	  					&nbsp;Upon finishing, an output file will automatically be generated. 
-					</p>
-        		</div>
-				<div class="modal-footer">
-          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
-	<div class="modal fade" id="newday-modal" role="dialog">
-    	<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-        		<div class="modal-header">
-          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">NewDay USA Case Competition</h4>
-        		</div>
-        		<div class="modal-body">
-					<center>
-						<div class="details-pic center-block">
-							<iframe id="newday-ppt" src="https://docs.google.com/presentation/d/16wC8z32yGyOW7hVouXUBy1-upZ1Pk5D3vfwSX4TkJyw/embed?start=false&loop=true&delayms=3000" frameborder="0" width="480" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-						</div>
-					</center>
-          			<p class="text-md-left text-xs-center">
-						NewDayUSA, a Virginia-based mortgage housing lender, focused on 
-						catering to veterans, holds an annual case competition, where winners'
-						ideas are implemented.
-					</p>
-        		</div>
-				<div class="modal-footer">
-          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
-	<div class="modal fade" id="deloitte-modal" role="dialog">
-    	<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-        		<div class="modal-header">
-          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Deloitte National Case Competition</h4>
-        		</div>
-        		<div class="modal-body">
-					<center>
-						<div class="details-pic">
-							<iframe id="deloitte-ppt" src="https://docs.google.com/presentation/d/1W3OzZPQNWmrL48EcBemakJFsw1tq5D4Zy6RmiTZw3Jk/embed?start=false&loop=true&delayms=3000" frameborder="0" width="481" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-						</div>
-					</center>
-          			<p class="text-md-left text-xs-center">
-						This was Deloitte's annual national case competition. I competed with
-						2 friends from my consulting club, and one of their business fraternity
-						friends. Out of over 36 teams, we placed second. The case was about a
-						grocery store, EatRite, that was experiencing declining profits due to 
-						high turnover rate and lacking technology. We developed a plan for them to 
-						increase their appeal among young shoppers while maintaining their existing 
-						client base with technology, which also helped lower the turnover rate. 
-					</p>
-        		</div>
-				<div class="modal-footer">
-          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
 </body>
 </html>
