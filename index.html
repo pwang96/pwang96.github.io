@@ -4,50 +4,65 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato"" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="pics/favicon-96x96.png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="index.js"> </script>
   <title>Peter Wang</title>
 </head>
-
 <body>
-	<div id="page">
-		<div id="sidebar">
-			<div id="intro">
-				<div id="biopic">
-					<img id="biopic" class="biopic" src="pics/profile.jpg"/>
+	<div id="mobile-indicator"></div>
+		<div class="wrapper">
+			<nav id="sidebar">
+				<div id="profile-pic">
+					<img id="profile-pic" src="pics/profile.jpg"/>
 				</div>
-				<h1 style="padding-bottom:0.5em">
-					<a href="index.html">Peter Wang</a>
-				</h1>
-				<h4 style="padding-bottom:0.3em">Engineer</h4>
-			</div>
-			<div id="navbar">
-				<ul id="navlist">
-					<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-					<li><a href="#about" data-nav-section="about">About</a></li>
-					<li><a href="#blog" data-nav-section="blog">Blog</a></li>
-					<li><a href="#contact" data-nav-section="contact">Contact</a></li>
-				</ul>
-			</div>
 
-		</div>
-		<div id="content">
-			<div id="main-content">
+				<div class="text-center" id="profile-name">
+					<h1>Peter Wang</h1>
+				</div>
+
+				<div class="text-center" id="profile-desc">
+					<h6>Engineer/Mathematician</h6>
+				</div>
+
+				<div id="navbar">
+					<ul id="navlist">
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#about" data-nav-section="about">About</a></li>
+						<li><a href="#blog" data-nav-section="blog">Blog</a></li>
+						<li><a href="#contact" data-nav-section="contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- Page Content  -->
+			<div class="container" id="content">
+				<div class="d-block d-lg-none">
+					<button type="button" id="sidebarCollapse" class="btn btn-default">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
 				<div id="home" class="">
-					<div id="home-pic">
+					<!-- <div id="home-pic">
 						<img src="pics/osman-rana-dI9KhXi0ooE-unsplash.jpg"/>
-					</div>
+					</div> -->
 					<h1>Hello! I'm Peter.</h1>
 					<div id="home-blurb">
-						Welcome to my website, where you can find out more about me, follow my blog posts, and reach out to me!
+						<p>
+							Welcome to my website, where you can find out more about me, follow my blog posts, and reach out to me!
+						</p>
+						<p>
+							This site is still very much in progress, so check back regularly for updates!
+						</p>
 					</div>
 				</div>
-				<div id="about" class="hidden">
+				<div id="about" class="d-none">
 					<h1>About Me</h1>
 					<div id="about-blurb">
 						<p>
@@ -59,7 +74,146 @@
 						<a href="resume.pdf" class="btn btn-outline-primary">Resume</a>
 					</div>
 				</div>
-				<div id="blog" class="hidden">
+				<div id="blog" class="d-none">
+					<h1>Welcome to my blog!</h1>
+					<div id="blog-blurb">
+						<p>
+							I'll be posting everything I write here, along with a link to the original post (if applicable).
+						</p>
+					</div>
+					<div id="blog-list">
+						<ul>
+							<li><a href="#modal-post2" data-toggle="modal" data-target="#modal-post2">PALS Book Club: (Half) Year in Review - 2017</a> (Dec 27, 2017)</li>
+							<li><a href="#modal-post1" data-toggle="modal" data-target="#modal-post1">Christmas in Chappaqua, NY</a> (Dec 25, 2017)</li>
+						</ul>
+					</div>
+					<div id="blog-modals">
+						<!-- Blog Post 1-->
+						<div class="modal fade modal-post1" tabindex="-1" role="dialog" aria-labelledby="modal-post1" aria-hidden="true" id="modal-post1">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content">
+									<!-- Modal Header -->
+      		  						<div class="modal-header">
+										<h4 class="modal-title">Christmas in Chappaqua, NY</h4>
+										<h6 style="padding-top:2em; position:absolute">Dec 25, 2017</h6>
+										<button type="button" class="close" data-target="modal-post1" data-dismiss="modal">&times;</button>
+									</div>
+
+		  							<!-- Modal body -->
+		  							<div class="modal-body">
+										  <p>
+											This Christmas, my family traveled to Chappaqua, New York, to spend some time with my godmother and her family. Chappaqua is a small hamlet in the town of New Castle, New York, about 30 miles north of New York City. The people of this small community of 1,500 are so nice to each other that even the puppies have learned from them: an encounter between two dogs is nothing more than a cordial butt-sniff with no barks exchanged. Chappaqua is also the childhood home of Ben Stiller, Jeff Van Gundy, and the current home of the Clintons.
+										  </p>
+										  <p>
+											The name Chappaqua evolved from the Algonquian word shah-pah-ka, which meant “the rustling land,” because all you could hear was the rustle of the leaves in the wind, and that is just as true today as it was in 1730 when the Quakers first settled in the area.
+										  </p>
+										  <p>
+											My mom and I left our home in Rockville, MD at 9:30 on Saturday morning, the 23rd of December, en route to Chelsea, NYC, to pick up my brother Charles and his girlfriend Shannon. We arrived in NYC at around 3:30pm, loaded them and their presents into our already packed Acura SUV, and set off towards the rustling land. 40 minutes and 30 miles later, we drove up the long, snaking driveway to my godmother’s house and ended our voyage.
+										  </p>
+										  <p>
+											Minutes later, we were all exchanging our holiday greetings, trying to fit two years of catching up into 15 seconds while the trunk was still open. I was most excited to see their sheepdog-corgi mix named Charlie.
+										  </p>
+									</div>
+
+									<!-- Modal footer -->
+      		  						<div class="modal-footer">
+										<h6>Originally published on <a href="https://www.quora.com/q/donshicyosmmusne?">Quora</a></h6>
+		  							</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Blog Post 2-->
+						<div class="modal fade modal-post2" tabindex="-1" role="dialog" aria-labelledby="modal-post1" aria-hidden="true" id="modal-post2">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content">
+									<!-- Modal Header -->
+      		  						<div class="modal-header">
+										<h4 class="modal-title">PALS Book Club: (Half) Year in Review - 2017</h4>
+										<button type="button" class="close" data-target="modal-post2" data-dismiss="modal">&times;</button>
+		  							</div>
+
+		  							<!-- Modal body -->
+		  							<div class="modal-body">
+										  <p>
+											This Christmas, my family traveled to Chappaqua, New York, to spend some time with my godmother and her family. Chappaqua is a small hamlet in the town of New Castle, New York, about 30 miles north of New York City. The people of this small community of 1,500 are so nice to each other that even the puppies have learned from them: an encounter between two dogs is nothing more than a cordial butt-sniff with no barks exchanged. Chappaqua is also the childhood home of Ben Stiller, Jeff Van Gundy, and the current home of the Clintons.
+										  </p>
+										  <p>
+											The name Chappaqua evolved from the Algonquian word shah-pah-ka, which meant “the rustling land,” because all you could hear was the rustle of the leaves in the wind, and that is just as true today as it was in 1730 when the Quakers first settled in the area.
+										  </p>
+										  <p>
+											My mom and I left our home in Rockville, MD at 9:30 on Saturday morning, the 23rd of December, en route to Chelsea, NYC, to pick up my brother Charles and his girlfriend Shannon. We arrived in NYC at around 3:30pm, loaded them and their presents into our already packed Acura SUV, and set off towards the rustling land. 40 minutes and 30 miles later, we drove up the long, snaking driveway to my godmother’s house and ended our voyage.
+										  </p>
+										  <p>
+											Minutes later, we were all exchanging our holiday greetings, trying to fit two years of catching up into 15 seconds while the trunk was still open. I was most excited to see their sheepdog-corgi mix named Charlie.
+										  </p>
+		  							</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="contact" class="d-none">
+					<div id="contact-blurb">
+						<h3>
+							Please email me at <a href="mailto:wang.peter@columbia.edu">wang.peter@columbia.edu</a>
+						</h3>
+					</div>
+					<p></p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+<!-- <body>
+	<div class="container" id="page">
+        <nav id="sidebar">
+
+			<div id="profile-pic">
+				<img id="profile-pic" src="pics/profile.jpg"/>
+			</div>
+
+			<div class="text-center" id="profile-name">
+				<h1>Peter Wang</h1>
+			</div>
+
+			<div class="text-center" id="profile-desc">
+				<h5>Engineer/Mathematician</h5>
+			</div>
+
+			<div id="navbar">
+            	<ul class="list-unstyled components">
+					<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+					<li><a href="#about" data-nav-section="about">About</a></li>
+					<li><a href="#blog" data-nav-section="blog">Blog</a></li>
+					<li><a href="#contact" data-nav-section="contact">Contact</a></li>
+            	</ul>
+			</div>
+        </nav>
+		<div id="content">
+			<div id="main-content">
+				<div id="home" class="">
+					<div id="home-pic">
+						<img src="pics/osman-rana-dI9KhXi0ooE-unsplash.jpg"/>
+					</div>
+					<h1>Hello! I'm Peter.</h1>
+					<div id="home-blurb">
+						Welcome to my website, where you can find out more about me, follow my blog posts, and reach out to me!
+					</div>
+				</div>
+				<div id="about" class="d-none">
+					<h1>About Me</h1>
+					<div id="about-blurb">
+						<p>
+							Currently, I'm an MS student studying applied mathematics at Columbia University.
+						</p>
+						<p>
+							I graduated magna cum laude in May 2019 from the University of Maryland in with a degree in computer engineering.
+						</p>
+						<a href="resume.pdf" class="btn btn-outline-primary">Resume</a>
+					</div>
+				</div>
+				<div id="blog" class="d-none">
 					<h1>Welcome to my blog!</h1>
 					<div id="blog-blurb">
 						<p>
@@ -74,7 +228,7 @@
 					</div>
 
 				</div>
-				<div id="contact" class="hidden">
+				<div id="contact" class="d-none">
 					<div id="contact-blurb">
 						<h3>
 							Please email me at <a href="mailto:wang.peter@columbia.edu">wang.peter@columbia.edu</a>
@@ -85,5 +239,5 @@
 			</div>
 		</div>
 	</div>
-</body>
+</body> -->
 </html>
